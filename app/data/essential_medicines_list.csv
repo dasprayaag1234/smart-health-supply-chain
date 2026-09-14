@@ -1,0 +1,53 @@
+medicine_name,category,dosage_form,who_eml_section,typical_use
+Paracetamol,Analgesic/Antipyretic,Tablet,Analgesics,Fever and pain relief
+Ibuprofen,Analgesic/Anti-inflammatory,Tablet,Analgesics,Pain and inflammation
+Diclofenac,Analgesic/Anti-inflammatory,Injection,Analgesics,Moderate to severe pain
+Morphine,Analgesic (Opioid),Injection,Analgesics,Severe pain management
+Amoxicillin,Antibiotic,Capsule,Anti-infective,Bacterial infections
+Ampicillin,Antibiotic,Injection,Anti-infective,Bacterial infections
+Ciprofloxacin,Antibiotic,Tablet,Anti-infective,Broad-spectrum bacterial infections
+Metronidazole,Antibiotic/Antiprotozoal,Tablet,Anti-infective,Anaerobic infections
+Azithromycin,Antibiotic,Tablet,Anti-infective,Respiratory infections
+Doxycycline,Antibiotic,Capsule,Anti-infective,Respiratory and other infections
+Benzylpenicillin,Antibiotic,Injection,Anti-infective,Severe bacterial infections
+Gentamicin,Antibiotic,Injection,Anti-infective,Severe bacterial infections
+Chloroquine,Antimalarial,Tablet,Antimalarials,Malaria treatment
+Artemether + Lumefantrine,Antimalarial,Tablet,Antimalarials,Malaria (first-line ACT)
+Quinine,Antimalarial,Injection,Antimalarials,Severe malaria
+Primaquine,Antimalarial,Tablet,Antimalarials,Malaria relapse prevention
+Isoniazid,Antituberculosis,Tablet,Anti-TB,Tuberculosis treatment
+Rifampicin,Antituberculosis,Tablet,Anti-TB,Tuberculosis treatment
+Ethambutol,Antituberculosis,Tablet,Anti-TB,Tuberculosis treatment
+Pyrazinamide,Antituberculosis,Tablet,Anti-TB,Tuberculosis treatment
+Oral Rehydration Salts (ORS),Rehydration,Sachet,Gastrointestinal,Dehydration from diarrhoea
+Zinc Sulphate,Nutritional Supplement,Tablet,Gastrointestinal,Diarrhoea management in children
+Ranitidine,Antacid,Tablet,Gastrointestinal,Acid reflux and ulcers
+Omeprazole,Antacid,Capsule,Gastrointestinal,Peptic ulcer disease
+Insulin (Soluble),Antidiabetic,Injection,Endocrine,Diabetes management
+Metformin,Antidiabetic,Tablet,Endocrine,Type 2 diabetes
+Glibenclamide,Antidiabetic,Tablet,Endocrine,Type 2 diabetes
+Atenolol,Cardiovascular,Tablet,Cardiovascular,Hypertension
+Amlodipine,Cardiovascular,Tablet,Cardiovascular,Hypertension
+Enalapril,Cardiovascular,Tablet,Cardiovascular,Hypertension and heart failure
+Furosemide,Diuretic,Tablet,Cardiovascular,Fluid overload/hypertension
+Aspirin,Antiplatelet,Tablet,Cardiovascular,Cardiovascular protection
+Atorvastatin,Lipid-lowering,Tablet,Cardiovascular,Cholesterol management
+Oxytocin,Uterotonic,Injection,Maternal Health,Postpartum hemorrhage prevention
+Magnesium Sulphate,Anticonvulsant,Injection,Maternal Health,Eclampsia/pre-eclampsia
+Misoprostol,Uterotonic,Tablet,Maternal Health,Postpartum hemorrhage
+Folic Acid,Nutritional Supplement,Tablet,Maternal Health,Anaemia prevention in pregnancy
+Iron + Folic Acid,Nutritional Supplement,Tablet,Maternal Health,Anaemia prevention
+Calcium Carbonate,Nutritional Supplement,Tablet,Maternal Health,Pregnancy supplementation
+BCG Vaccine,Vaccine,Injection,Vaccines,Tuberculosis prevention (infants)
+DPT Vaccine,Vaccine,Injection,Vaccines,Diphtheria/Pertussis/Tetanus
+Measles Vaccine,Vaccine,Injection,Vaccines,Measles prevention
+Oral Polio Vaccine,Vaccine,Oral drops,Vaccines,Polio prevention
+Hepatitis B Vaccine,Vaccine,Injection,Vaccines,Hepatitis B prevention
+Tetanus Toxoid,Vaccine,Injection,Vaccines,Tetanus prevention
+Chlorpheniramine,Antihistamine,Tablet,Antiallergics,Allergic reactions
+Salbutamol,Bronchodilator,Inhaler,Respiratory,Asthma/bronchospasm
+Hydrocortisone,Corticosteroid,Injection,Hormones,Severe allergic reactions/asthma
+Povidone Iodine,Antiseptic,Solution,Dermatological,Wound antisepsis
+Normal Saline (0.9% NaCl),IV Fluid,Infusion,IV Fluids,Fluid replacement/dehydration
+Ringer's Lactate,IV Fluid,Infusion,IV Fluids,Fluid replacement
+Dextrose 5%,IV Fluid,Infusion,IV Fluids,Fluid/glucose replacement
