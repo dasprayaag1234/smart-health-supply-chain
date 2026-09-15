@@ -31,3 +31,24 @@ def get_critical_stock(limit: int = 50):
 
 def get_all_medicines():
     return medicines_df.to_dict(orient="records")
+
+def get_summary_stats():
+    total_facilities = len(facilities_df)
+    total_states = facilities_df["state"].nunique()
+    total_districts = facilities_df["district"].nunique()
+
+    critical_count = len(stock_df[stock_df["stock_status"] == "Critical"])
+    low_count = len(stock_df[stock_df["stock_status"] == "Low"])
+    healthy_count = len(stock_df[stock_df["stock_status"] == "Healthy"])
+
+    facilities_with_critical_stock = stock_df[stock_df["stock_status"] == "Critical"]["facility_id"].nunique()
+
+    return {
+        "total_facilities": total_facilities,
+        "total_states": total_states,
+        "total_districts": total_districts,
+        "critical_stock_records": critical_count,
+        "low_stock_records": low_count,
+        "healthy_stock_records": healthy_count,
+        "facilities_with_critical_stock": facilities_with_critical_stock,
+    }
