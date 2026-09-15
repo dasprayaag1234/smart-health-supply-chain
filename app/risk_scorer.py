@@ -73,5 +73,36 @@ def get_risk_ranked_stockouts(limit: int = 100):
         axis=1
     )
 
+    merged["risk_explanation"] = merged.apply(
+        lambda row: generate_risk_explanation(
+            row["current_quantity"], row["reorder_threshold"],
+            row["medicine_name"], row["bed_count"], row["facility_type"]
+        ),
+        axis=1
+    )
+
     merged = merged.sort_values("risk_score", ascending=False)
     return merged.head(limit).to_dict(orient="records")
+
+def generate_risk_explanation(current_quantity: int, reorder_threshold: int,
+                                medicine_name: str, bed_count: int, facility_type: str) -> str:
+    """Generates a plain-language explanation for why a stock record is flagged as risky."""
+    reasons = []
+
+    if reorder_threshold > 0:
+        pct_of_threshold = (current_quantity / reorder_threshold) * 100
+        if current_quantity == 0:
+            reasons.append(f"stock is fully depleted (0 units)")
+        else:
+            reasons.append(f"current stock ({current_quantity} units) is only {pct_of_threshold:.0f}% of the reorder threshold ({reorder_threshold} units)")
+
+    if medicine_name in HIGH_CRITICALITY_MEDICINES:
+        reasons.append(f"{medicine_name} is a high-criticality medicine (maternal health, emergency care, or vaccine) where stock-outs carry serious risk")
+
+    if bed_count >= 100:
+        reasons.append(f"this is a larger facility ({bed_count} beds), so a stock-out affects a proportionally larger patient population")
+
+    if not reasons:
+        return "Stock levels are within an acceptable range relative to this facility's typical demand."
+
+    return "This facility is flagged because " + "; and ".join(reasons) + "."
