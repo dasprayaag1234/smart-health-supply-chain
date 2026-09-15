@@ -1,9 +1,16 @@
 from fastapi import FastAPI, HTTPException
-from app import data_loader
-from app import risk_scorer
-from app import redistribution
+from fastapi.middleware.cors import CORSMiddleware
+from app import data_loader, risk_scorer, redistribution
 
 app = FastAPI(title="Smart Health & Supply Chain API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():
