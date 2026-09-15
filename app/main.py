@@ -50,3 +50,7 @@ def ranked_risk(limit: int = 100):
 @app.get("/redistribution/recommendations")
 def redistribution_recommendations(limit: int = 50):
     return redistribution.get_redistribution_recommendations(limit)
+
+@app.get("/stats/summary")
+def summary_stats():
+    return data_loader.get_summary_stats()
