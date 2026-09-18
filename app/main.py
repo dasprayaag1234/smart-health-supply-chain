@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app import data_loader, risk_scorer, redistribution
+from app import forecasting
 
 app = FastAPI(title="Smart Health & Supply Chain API")
 
@@ -54,3 +55,13 @@ def redistribution_recommendations(limit: int = 50):
 @app.get("/stats/summary")
 def summary_stats():
     return data_loader.get_summary_stats()
+
+@app.get("/forecast/{facility_id}/{medicine_name}")
+def get_forecast(facility_id: str, medicine_name: str):
+    stock = data_loader.get_stock_for_facility(facility_id)
+    record = next((s for s in stock if s["medicine_name"] == medicine_name), None)
+    if record is None:
+        raise HTTPException(status_code=404, detail="Stock record not found")
+    return forecasting.generate_trend_and_projection(
+        record["current_quantity"], record["reorder_threshold"], facility_id, medicine_name
+    )
